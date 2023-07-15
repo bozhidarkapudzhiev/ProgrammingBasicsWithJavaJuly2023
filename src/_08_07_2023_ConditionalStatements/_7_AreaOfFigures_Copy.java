@@ -23,5 +23,6 @@ public class _7_AreaOfFigures_Copy {
            area=(triangleA*triangleB)/2;
        }
         System.out.println(area);
+        System.out.printf("%.3f",area);
     }
 }
