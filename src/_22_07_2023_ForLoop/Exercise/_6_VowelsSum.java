@@ -1,8 +1,8 @@
-package _22_07_2023_ForLoop.Exercise._6;
+package _22_07_2023_ForLoop.Exercise;
 
 import java.util.Scanner;
 
-public class _VowelsSum {
+public class _6_VowelsSum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String text=scanner.nextLine();
