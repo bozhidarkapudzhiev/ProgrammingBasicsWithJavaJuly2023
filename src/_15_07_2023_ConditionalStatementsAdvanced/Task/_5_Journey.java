@@ -5,37 +5,34 @@ import java.util.Scanner;
 public class _5_Journey {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double budge = Double.parseDouble(scanner.nextLine());
-        String season = scanner.nextLine();
-
-        double price=0;
+        double budget=Double.parseDouble(scanner.nextLine());
+        String season=scanner.nextLine();
+        String place="";
         String destination="";
-        if (budge <= 100) {
-            destination = "Bulgaria";
-            if (season.equals("summer")) {
-                price = budge * 30 / 100;
-            } else if (season.equals("winter")) {
-                price = budge * 70 / 100;
+        if (budget<=100){
+            destination="Bulgaria";
+            if (season.equals("summer")){
+                budget=(budget*30/100);
+                place="Camp";
+            }else if (season.equals("winter")){
+                budget=(budget*70/100);
+                place="Hotel";
             }
-        } else if (budge <= 1000) {
-            destination = "Balkans";
-            if (season.equals("summer")) {
-                price = budge * 40 / 100;
+        }else if (budget<=1000){
+            destination="Balkans";
+            if (season.equals("summer")){
+                budget=(budget*40/100);
+                place="Camp";
             } else if (season.equals("winter")) {
-                price = budge * 80 / 100;
+                budget=(budget*80/100);
+                place="Hotel";
             }
+        }else if (budget>1000){
+            destination="Europe";
+            budget=(budget*90/100);
+            place="Hotel";
 
-        } else if (budge > 1000) {
-            destination = "Europe";
-            price = budge * 90 / 100;
         }
-        String  type="";
-        if (season.equals("winter")||destination.equals("Europe")) {
-            type="Hotel";
-        }else {
-            type="Camp";
-        }
-        System.out.printf("Somewhere in %s%n",destination);
-        System.out.printf("%s - %.2f",type,price);
+        System.out.printf("Somewhere in %s\n%s - %.2f",destination,place,budget);
     }
 }

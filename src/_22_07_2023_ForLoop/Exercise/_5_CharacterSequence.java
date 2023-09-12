@@ -5,10 +5,9 @@ import java.util.Scanner;
 public class _5_CharacterSequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String scanText=scanner.nextLine();
-        for (int i=0;i<scanText.length();i++){
-           char letter=scanText.charAt(i);
-            System.out.println(letter);
+        String input=scanner.nextLine();
+        for (int i=0;i<input.length();i++){
+            System.out.println(input.charAt(i));
         }
     }
 }

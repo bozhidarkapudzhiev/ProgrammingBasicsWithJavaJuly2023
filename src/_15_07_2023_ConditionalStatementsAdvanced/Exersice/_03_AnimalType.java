@@ -7,7 +7,7 @@ public class _03_AnimalType {
         Scanner scanner = new Scanner(System.in);
         String animal=scanner.nextLine();
         switch (animal){
-            case "dog":
+            case"dog":
                 System.out.println("mammal");
                 break;
             case "crocodile":
@@ -17,7 +17,6 @@ public class _03_AnimalType {
                 break;
             default:
                 System.out.println("unknown");
-                break;
         }
     }
 }

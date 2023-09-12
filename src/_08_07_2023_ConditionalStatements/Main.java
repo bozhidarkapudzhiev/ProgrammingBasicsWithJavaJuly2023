@@ -4,12 +4,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        String currentDay="Monday";
-        double salary=0;
-        if (currentDay.equals("Monday")){
-            salary=Double.parseDouble(scanner.nextLine());
+        Scanner scanner = new Scanner(System.in);
+        /*  String a="Example";
+     String b=a;
+     boolean equalsAB=(a==b);
+        System.out.println(equalsAB);   //true*/
+        String a=scanner.nextLine();
+        String b=scanner.nextLine();
+        boolean isEqualsAB=(a.equals(b));
+        if (isEqualsAB==true){
+            System.out.println("a==b");
+        }else {
+            System.out.println("!a=b");
         }
-        System.out.println(salary);
     }
 }

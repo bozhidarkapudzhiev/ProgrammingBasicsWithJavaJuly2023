@@ -5,28 +5,21 @@ import java.util.Scanner;
 public class _6_VowelsSum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String text=scanner.nextLine();
-        int sumOfVowels=0;
-        for (int i = 0; i <text.length() ; i++) {
-            char currentSymbol=text.charAt(i);
-            switch (currentSymbol){
-                case 'a':
-                    sumOfVowels+=1;
-                    break;
-                case 'e':
-                    sumOfVowels+=3;
-                    break;
-                case 'i':
-                    sumOfVowels+=3;
-                    break;
-                case 'o':
-                    sumOfVowels+=4;
-                    break;
-                case 'u':
-                    sumOfVowels+=5;
-                    break;
+        String input=scanner.nextLine();
+        int sum=0;
+        for (int i = 0; i <input.length() ; i++) {
+            if (input.charAt(i)=='a'){
+                sum+=1;
+            }else if (input.charAt(i)=='e'){
+                sum+=2;
+            }else if (input.charAt(i)=='i'){
+                sum+=3;
+            } else if (input.charAt(i)=='o') {
+                sum+=4;
+            } else if (input.charAt(i)=='u') {
+                sum+=5;
             }
         }
-        System.out.println(sumOfVowels);
+        System.out.println(sum);
     }
 }
